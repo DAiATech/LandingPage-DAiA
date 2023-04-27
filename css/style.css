@@ -6,6 +6,9 @@
 }
 
 /* inicio nav bar */
+.logo{
+    width: 100px;
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -13,7 +16,7 @@ nav{
     font-family: 'Alegreya Sans SC';
     background:#FFFEF3 ;
     height: 3.5vh;
-    border-bottom: 1px solid #4A401D;
+    border-bottom: 2px solid #4A401D;
 }
 .nav-list li a{
     text-decoration: none;
@@ -66,7 +69,7 @@ nav{
         border-radius: 15px;
     }
     .seg{
-        border-right: 1px solid #4A401D;
+        border-right: 5px solid #4A401D;
     }
     .nav-list li{
         margin-left: 0;
