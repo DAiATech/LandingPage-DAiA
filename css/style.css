@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alegreya+Sans+SC:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -281,3 +282,33 @@ a.dropdown-item:hover{
         -ms-transform: scale(1.1);
             transform: scale(1.1);
    }
+
+#sobrenos{
+    background-color: #483C28;
+}
+#txtsobre{
+    color: #FFFDEE;
+    font-family: 'Poppins';
+}
+#titulos{
+    color: #FFFDEE;
+    font-family: 'Poppins';
+}
+#INKonnect{
+    background-color: #FFFDEE;
+}
+#txtink{
+    color: #483C28;
+    font-family: 'Poppins';
+}
+#tituloink{
+    color: #483C28;
+    font-family: 'Poppins';
+}
+#inkimg{
+    margin-top: 15vh;
+}
+#inkgrupo{
+    margin-top: 16vh;
+}
+
