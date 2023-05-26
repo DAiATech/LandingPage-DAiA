@@ -151,7 +151,7 @@ a.dropdown-item:hover{
     color: #FEFAE0;
 }
 .integrantes{
-    background-color: #523D2D;
+    background-color: #483C28;
     align-items: center;
 }
 #caca{
@@ -305,10 +305,13 @@ a.dropdown-item:hover{
     color: #483C28;
     font-family: 'Poppins';
 }
-#inkimg{
-    margin-top: 15vh;
-}
-#inkgrupo{
-    margin-top: 16vh;
-}
+.group{
+    background-color: #483C28;
 
+}
+p{
+    font-family: 'Poppins';
+}
+.bright-text{
+    color: #FFFDEE;
+}
