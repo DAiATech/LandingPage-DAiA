@@ -12,178 +12,185 @@
       <!-- JavaScript Bundle with Popper -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="wrapper">
-        
-        <header class="fixed-top">
-            <nav >
-                <div class="mobile-menu">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <ul class="nav-list">
-                  <li class="pt-1 ps-5 pe-5 seg"><a href="#sobrenos"> Sobre Nós</a></li>
-                  <li class="pt-1 ps-5 pe-5 seg"><a href="#INKonnect"> <b>INKonnect</b></a></li>
-                  <li class="pt-1 ps-5 pe-5 ultimo"><a  href="#team"> Integrantes</a></li>  
-                </ul>
-            </nav>
-            <div id="logo" class="pt-2 pb-2">
-                <a href="#"><img src="img/daialogo.png" class="pt-2 pb-2 logo"></a>
+      <header>
+        <nav class="fixed-top nav-header">
+          <links id="links" class="links">
+            <div class="line">
+              <a href="#" class="px-5 a1">Sobre Nós</a>
             </div>
-        </header>
-        <main class=" pt-4">
-            <div class="carrossel pt-5">
-                <div class="container">
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="img/tatuador.png" class="d-block w-100"  >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/tatuador-1.jpg" class="d-block w-100"  >
-                      </div>
-                      <div class="carousel-item">
-                        <img src="img/tatuador-2.png" class="d-block w-100"  >
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
+            <div>
+              <a href="#" class="px-5 a2">INKonnect</a>
             </div>
-            <div class="group pt-5 pb-5">
-              <div class="container">
-                <div class="row justify-content-md-center">
-                  <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
-                    <h1>Sobre Nós</h1>
-                    <p class="h6" class="bright-text">
-                        Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que promete revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada a desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando as melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes apaixonados por tatuagens de maneira rápida, eficiente e confiável.
-                    </p>
-                  </div>
-                  <div class="img col-md-5 col-sm-5 align-self-center" >
-                    <img src="img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid">
-                  </div>
+            <div class="line2">
+              <a href="#team" class="px-5 a3">Integrantes</a>
+            </div>
+          </links>
+          <div id="divlogo">
+            <img src="img/daialogo.png" class="logo">
+          </div>
+        </nav>
+      </header>
+
+
+
+
+
+        <main>
+          <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" id="img1">
+              </div>
+              <div class="carousel-item" id="img2">
+              </div>
+              <div class="carousel-item" id="img3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div id="blog-preview" class="d-flex align-items-center justify-content-center">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, provident laboriosam ad in voluptatum consectetur dolorum obcaecati porro dignissimos quibusdam...</p>
+          </div>
+
+
+
+
+
+
+          <div class="group pt-5 pb-5">
+            <div class="container">
+              <div class="row justify-content-md-center">
+                <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
+                  <h1>Sobre Nós</h1>
+                  <p class="h6" class="bright-text">
+                      Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que promete revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada a desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando as melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes apaixonados por tatuagens de maneira rápida, eficiente e confiável.
+                  </p>
+                </div>
+                <div class="img col-md-5 col-sm-5 align-self-center" >
+                  <img src="img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid">
                 </div>
               </div>
             </div>
+          </div>
 
 
-            <!-- <div id="sobrenos">
-                <div class="pb-5 container-fluid">
-                    <div class="container col-13 col-sm-10 col-lg-8">
-                      
-                      <div class="row">
-                        <div class="col-8 col-sm-8 col-md-8 col-lg-8">                          
-                            <h1 class="display-5 lh-1 mb-3 mt-5" id="titulos">Sobre Nós</h1>
-                            <p id="txtsobre" class="h5">
-                                Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que promete revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada a desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando as melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes apaixonados por tatuagens de maneira rápida, eficiente e confiável.
-                            </p>
+          <!-- <div id="sobrenos">
+              <div class="pb-5 container-fluid">
+                  <div class="container col-13 col-sm-10 col-lg-8">
+                    
+                    <div class="row">
+                      <div class="col-8 col-sm-8 col-md-8 col-lg-8">                          
+                          <h1 class="display-5 lh-1 mb-3 mt-5" id="titulos">Sobre Nós</h1>
+                          <p id="txtsobre" class="h5">
+                              Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que promete revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada a desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando as melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes apaixonados por tatuagens de maneira rápida, eficiente e confiável.
+                          </p>
+                      </div>
+                      <div class="col-12 col-sm-12 col-md-8 col-lg-4 ">
+                          <img id="inkgrupo" src="img/kkk.jpeg" alt="q foto ruim kkkkk" width="580">
+                      </div> 
+                    </div>
+                  </div>
+                </div>
+          </div> -->
+          <div id="INKonnect">
+            <div class="pb-5 pt-3 container-fluid">
+                  <div class="container col-13 col-sm-10 col-lg-10">
+                    
+                    <div class="row m-0 p-0">
+                      <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-3">
+                          <img class="" src="img/ink.png" id="inkimg" width="280">
+                      </div> 
+                      <div class="col-20 col-sm-12 col-md-12 col-lg-8">
+                        <div class="container col-12 col-sm-12 col-lg-11 ">
+                          <h1 class="display-5 lh-1 mb-3 mt-4" id="tituloink">INKonnect</h1>
+                          <p id="txtink">
+                              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est vitae accusamus, laboriosam quidem ipsam tenetur? Velit nihil est asperiores, reprehenderit nostrum eos, id enim ex et omnis quaerat temporibus. Nam nulla obcaecati optio numquam earum, est excepturi nostrum, velit odio pariatur quidem corrupti. Maiores aliquid cupiditate cumque est, dignissimos aliquam, voluptatum fuga recusandae ut assumenda quis, laudantium tempora. Autem corrupti aut distinctio error ab, vitae, corporis veniam voluptatum vero possimus dignissimos architecto amet nam tempora quos consequuntur omnis laboriosam, dolore dolorem quidem? Libero omnis animi dicta veniam in, atque, assumenda ad consectetur eveniet harum eligendi odio tempore provident fugit cupiditate!
+                          </p>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-8 col-lg-4 ">
-                            <img id="inkgrupo" src="img/kkk.jpeg" alt="q foto ruim kkkkk" width="580">
-                        </div> 
                       </div>
                     </div>
                   </div>
-            </div> -->
-            <div id="INKonnect">
-              <div class="pb-5 pt-3 container-fluid">
-                    <div class="container col-13 col-sm-10 col-lg-10">
-                      
-                      <div class="row m-0 p-0">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-3">
-                            <img class="" src="img/logo 4.png" id="inkimg" width="280">
-                        </div> 
-                        <div class="col-20 col-sm-12 col-md-12 col-lg-8">
-                          <div class="container col-12 col-sm-12 col-lg-11 ">
-                            <h1 class="display-5 lh-1 mb-3 mt-4" id="tituloink">INKonnect</h1>
-                            <p id="txtink">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est vitae accusamus, laboriosam quidem ipsam tenetur? Velit nihil est asperiores, reprehenderit nostrum eos, id enim ex et omnis quaerat temporibus. Nam nulla obcaecati optio numquam earum, est excepturi nostrum, velit odio pariatur quidem corrupti. Maiores aliquid cupiditate cumque est, dignissimos aliquam, voluptatum fuga recusandae ut assumenda quis, laudantium tempora. Autem corrupti aut distinctio error ab, vitae, corporis veniam voluptatum vero possimus dignissimos architecto amet nam tempora quos consequuntur omnis laboriosam, dolore dolorem quidem? Libero omnis animi dicta veniam in, atque, assumenda ad consectetur eveniet harum eligendi odio tempore provident fugit cupiditate!
-                            </p>
+                </div>
+          </div>
+          <div id="team" class="integrantes">
+              <div class="container pt-4">
+                  <span class="h1" id="int">DAiA</span>
+              </div>
+              <div class="container col-6 col-xxl-12 px-4 py-4 text-center" id="caca">
+                  <div class="row" id="card-int">
+                      <div class="card me-5 ms-5 mt-3">
+                          <div class="card-info">
+                          <div class="card-avatar"><img src="img/dig.png" alt=""></div>
+                          <div class="card-title">Diego</div>
+                          <div class="card-subtitle">Back-end</div>
                           </div>
-                        </div>
+                          
+                          <ul class="card-social">
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/SouzaDiegoCl"><i class="bi bi-github icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/diegosouzaperfil/"><i class="bi bi-linkedin icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/s0uza_diego/"><i class="bi bi-instagram icon"></i></a></li>
+                          </ul>
                       </div>
-                    </div>
+                      <div class="card me-5 ms-5 mt-3">
+                          <div class="card-info">
+                          <div class="card-avatar"><img src="img/amanda.png" alt=""></div>
+                          <div class="card-title">Amanda</div>
+                          <div class="card-subtitle">Web Developer</div>
+                          </div>
+                          
+                          <ul class="card-social">
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/amandazzoc"><i class="bi bi-github icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/amanda-oliveira-970410232/"><i class="bi bi-linkedin icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/amandazzoc/?utm_medium=copy_link"><i class="bi bi-instagram icon"></i></a></li>
+                          </ul>
+                      </div>
+                      <div class="card me-5 ms-5 mt-3">
+                          <div class="card-info">
+                          <div class="card-avatar"><img src="img/igor.png" alt=""></div>
+                          <div class="card-title">Igor</div>
+                          <div class="card-subtitle">Designer</div>
+                          </div>
+                          
+                          <ul class="card-social">
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/IgorLGomes"><i class="bi bi-github icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/igor-gomes-ab581a214/"><i class="bi bi-linkedin icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/igomsleit/"><i class="bi bi-instagram icon"></i></a></li>
+                          </ul>
+                      </div>
+                      <div class="card me-5 ms-5 mt-3">
+                          <div class="card-info">
+                          <div class="card-avatar"><img src="img/arthu.png" alt=""></div>
+                          <div class="card-title">Arthur</div>
+                          <div class="card-subtitle">Mobile Developer</div>
+                          </div>
+                          
+                          <ul class="card-social">
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/arthurfudali"><i class="bi bi-github icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/arthurfudali/"><i class="bi bi-linkedin icon"></i></a></li>
+                              <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/arthurfudali/"><i class="bi bi-instagram icon"></i></a></li>
+                          </ul>
+                      </div>
                   </div>
-            </div>
-            <div id="team" class="integrantes">
-                <div class="container pt-4">
-                    <span class="h1" id="int">DAiA</span>
-                </div>
-                <center>
-                <div class="container col-6 col-xxl-12 px-4 py-4 text-center" id="caca">
-                    <div class="row" id="card-int">
-                        <div class="card me-5 ms-5 mt-3">
-                            <div class="card-info">
-                            <div class="card-avatar"><img src="img/dig.png" alt=""></div>
-                            <div class="card-title">Diego</div>
-                            <div class="card-subtitle">Back-end</div>
-                            </div>
-                            
-                            <ul class="card-social">
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/SouzaDiegoCl"><i class="bi bi-github icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/diegosouzaperfil/"><i class="bi bi-linkedin icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/s0uza_diego/"><i class="bi bi-instagram icon"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="card me-5 ms-5 mt-3">
-                            <div class="card-info">
-                            <div class="card-avatar"><img src="img/amanda.png" alt=""></div>
-                            <div class="card-title">Amanda</div>
-                            <div class="card-subtitle">Web Developer</div>
-                            </div>
-                            
-                            <ul class="card-social">
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/amandazzoc"><i class="bi bi-github icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/amanda-oliveira-970410232/"><i class="bi bi-linkedin icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/amandazzoc/?utm_medium=copy_link"><i class="bi bi-instagram icon"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="card me-5 ms-5 mt-3">
-                            <div class="card-info">
-                            <div class="card-avatar"><img src="img/igor.png" alt=""></div>
-                            <div class="card-title">Igor</div>
-                            <div class="card-subtitle">Designer</div>
-                            </div>
-                            
-                            <ul class="card-social">
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/IgorLGomes"><i class="bi bi-github icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/igor-gomes-ab581a214/"><i class="bi bi-linkedin icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/igomsleit/"><i class="bi bi-instagram icon"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="card me-5 ms-5 mt-3">
-                            <div class="card-info">
-                            <div class="card-avatar"><img src="img/arthu.png" alt=""></div>
-                            <div class="card-title">Arthur</div>
-                            <div class="card-subtitle">Mobile Developer</div>
-                            </div>
-                            
-                            <ul class="card-social">
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://github.com/arthurfudali"><i class="bi bi-github icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.linkedin.com/in/arthurfudali/"><i class="bi bi-linkedin icon"></i></a></li>
-                                <li class="card-social__item"><a class="text-muted" target="_blank" href="https://www.instagram.com/arthurfudali/"><i class="bi bi-instagram icon"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </center>
-            </div>
-            
-        </main>
-        <footer>
+              </div>
+          </div>
+          
+      </main>
+      <footer>
 
-        </footer>
-    </div>
-    <script src="js/mobile-navbar.js"></script>
-    <!-- link bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
-  </body>
+      </footer>
+  </div>
+  <script src="js/mobile-navbar.js"></script>
+  <!-- link bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+</body>
 </html>
