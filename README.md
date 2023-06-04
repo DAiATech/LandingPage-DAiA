@@ -1,4 +1,4 @@
-# Tcc
+# DAiA
 ## Landing Page de Apresentação do Grupo DAiA
 ### Descrição do Projeto:
     > Landing Page com o intuito de apresentar o nosso grupo e o projeto "INKonnect"
