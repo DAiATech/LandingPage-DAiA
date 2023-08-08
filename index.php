@@ -36,6 +36,7 @@
 
 
         <main>
+          <a class="btn m-3" href="views/login.php"></a>
           <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
