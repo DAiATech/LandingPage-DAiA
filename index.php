@@ -101,24 +101,17 @@
     </div>
 
 
-    <!-- <div id="sobrenos">
-              <div class="pb-5 container-fluid">
-                  <div class="container col-13 col-sm-10 col-lg-8">
-                    
-                    <div class="row">
-                      <div class="col-8 col-sm-8 col-md-8 col-lg-8">                          
-                          <h1 class="display-5 lh-1 mb-3 mt-5" id="titulos">Sobre Nós</h1>
-                          <p id="txtsobre" class="h5">
-                              Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que promete revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada a desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando as melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes apaixonados por tatuagens de maneira rápida, eficiente e confiável.
-                          </p>
-                      </div>
-                      <div class="col-12 col-sm-12 col-md-8 col-lg-4 ">
-                          <img id="inkgrupo" src="img/kkk.jpeg" alt="q foto ruim kkkkk" width="580">
-                      </div> 
-                    </div>
-                  </div>
-                </div>
-          </div> -->
+   <div id="blog">
+    <table>
+      <?php
+        $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo;");
+        while ($exibe = mysqli_fetch_array($query)) { ?>
+        
+        <?php}?>
+    </table>
+   </div>
+
+
     <div id="INKonnect">
       <div class="pb-5 pt-3 container-fluid">
         <div class="container col-13 col-sm-10 col-lg-10">
