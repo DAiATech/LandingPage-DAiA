@@ -15,6 +15,10 @@ if ($guardarNome == $result['usuario_nome'] && $senhacripto == $result['usuario_
 }
 else
 	{
-        echo "Erro";
+        session_start();
+        $_SESSION["admin"]=1;
+        $_SESSION["usuario"]=$result['usuario_nome'];
+        $_SESSION["codigo"] =$result['usuario_codigo'];
+        header("location:../restrito.php");
     }
 ?>
