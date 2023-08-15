@@ -57,7 +57,7 @@ class MobileNavbar {
   window.onscroll = function() {
       
     // pageYOffset or scrollY
-    if (window.pageYOffset > 10) {
+    if (window.scrollY > 10) {
       navbar.classList.add('scrolled')
       line.classList.add('scrolled')
       line2.classList.add('scrolled')
@@ -65,7 +65,7 @@ class MobileNavbar {
       text.forEach(function(text) {
         text.classList.add('scrolled');
       });
-      img.setAttribute('src', '../img/daialogo.png');
+      img.setAttribute('src', '../../views/img/daialogo.png');
     } else {
       navbar.classList.remove('scrolled')
       line.classList.remove('scrolled')
@@ -74,7 +74,7 @@ class MobileNavbar {
       text.forEach(function(text) {
         text.classList.remove('scrolled');
       });
-      img.setAttribute('src', '../img/daialogow.png');
+      img.setAttribute('src', '../../views/img/daialogow.png');
 
   }
 }
