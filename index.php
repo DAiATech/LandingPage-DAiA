@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
     crossorigin="anonymous"></script>
-    <?php include("models/conexao.php") ?>
+  <?php include("models/conexao.php") ?>
 </head>
 <header>
   <nav class="fixed-top nav-header">
@@ -102,24 +103,23 @@
     </div>
 
 
-   <div id="blog">
-      <?php
-        $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo;");
-        while ($exibe = mysqli_fetch_array($query))  ?>
-<!--         <div class="q1 col-6 m-4" ></div>
-        <div class="q2 col-4  pt-1"></div> -->
-        <div class="row">
-            <h1>Blog</h1>
-            <div class="col-6 m-4 q1">
-              <div class="square">1</div>
-            </div>
-            <div class="col mt-4">
-              <div class="square col-10 q2 ">2 </div>
-              <div class="square col-5 q3 m-2"> 3 </div>
-            </div>
-          </div>
+    <div id="blog">
 
-   </div>
+      <?php $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo;");
+      while ($exibe = mysqli_fetch_array($query)) ?>
+
+      <div class="row m-4">
+        <h1>Blog</h1>
+        <div class="col-6 q1">
+          <div class="square m-4">1</div>
+        </div>
+        <div class="col mt-4 ">
+          <div class="square col-10 q2 ">2 </div>
+          <div class="square col-5 q3"> 3 </div>
+        </div>
+      </div>
+
+    </div>
 
 
     <div id="INKonnect">
@@ -249,5 +249,5 @@
 <script src="controllers/js/mobile-navbar.js"></script>
 <!-- link bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></scSSript>
-</html>
+  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></scSSript >
+</html >
