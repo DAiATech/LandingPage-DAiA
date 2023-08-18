@@ -113,9 +113,9 @@
         <div class="col-6 q1">
           <div class="square m-4">1</div>
         </div>
-        <div class="col mt-4 ">
-          <div class="square col-10 q2 ">2 </div>
-          <div class="square col-5 q3"> 3 </div>
+        <div class="col-6 abc">
+          <div class="square col q2 ">2 </div>
+          <div class="square col q3"> 3 </div>
         </div>
       </div>
 
