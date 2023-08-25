@@ -104,19 +104,39 @@
 
 
     <div id="blog">
-
-      <?php $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo;");
-      while ($exibe = mysqli_fetch_array($query)) ?>
+      <?php
+      $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo;");
+ /*      while ($exibe = mysqli_fetch_array($query)) {  */
+      for($i=0; $i<3; $i++) { 
+      $exibe = mysqli_fetch_array($query);
+      ?>
 
       <div class="row m-4">
         <h1>Blog</h1>
+
         <div class="col-6 q1">
-          <div class="square m-4">1</div>
+          <div class="square m-4">
+            <img class="rounded mx-auto" src="cms/views/imgs/<?php echo $exibe[10] ?>" alt="" id="">
+            <a class="link-underline-opacity-0" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                        <h3 class="title">
+                            <?php echo $exibe[5] ?>
+                        </h3>
+                        Criada por <b>
+                            <?php echo $exibe[12] ?>
+                        </b> em
+                        <?php echo $exibe[7] ?>
+                        <hr>
+                        <?php echo substr($exibe[6], 0, 250) . "..." ?>
+                    </a>            
+          </div>
         </div>
+
         <div class="col-6 abc">
           <div class="square col q2 ">2 </div>
+
           <div class="square col q3"> 3 </div>
         </div>
+        <?php } ?>
       </div>
 
     </div>
