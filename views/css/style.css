@@ -10,7 +10,7 @@
 
 
 .logo {
-  height: 4vh;
+  height: 2vh;
 }
 
 
@@ -91,41 +91,40 @@ a:link.scrolled {
 
 /* blog */
 .q1 {
-  background-color: #66573c;
-  height: 40vh;
-  display: inline-block;
+  background-color: #483C28;
+  margin-right: 0px !important;
 }
 
 .q2 {
-  background-color: #19390F;
+  background-color: #483C28;
   height: 28vh;
-  margin: auto;
-  margin-bottom: 1vh;
-  margin-right: 2vw;
-  margin-left: 1vw;
 }
-
-.q3 {
-  background-color: #19390F;
-  height: 20vh;
-  margin: auto;
-  margin-top: 1vh;
-  margin-right: 2vw;
-  margin-left: 1vw;
+#blog{
+  height: 70vh;
 }
 .row {
   align-items: center;
+  margin-right: 0 !important
 }
-
+#noticia-direita .row{
+  display: flex;
+}
 .blog {
   display: flex;
   height: 100vh;
+  
 }
-
+#blog{
+  background-color: #FFFDEE;
+}
 #noticiaprincipal{
-  border-radius: 5px;
   height: 100%;
   display: flex;
+}
+#imgblog{
+  size: 200px;
+  height: 200px;
+  width: 250px;
 }
 
 
@@ -147,11 +146,11 @@ a:link.scrolled {
 
 #int {
   font-family: 'Abhaya Libre';
-  color: #FEFAE0;
+  color: #483C28;
 }
 
 .integrantes {
-  background-color: #483C28;
+  background-color: #FFFDEE;
   align-items: center;
 }
 
@@ -163,7 +162,7 @@ a:link.scrolled {
 .integrantes .card {
   width: 190px;
   height: 254px;
-  background: #FEFAE0;
+  background: #483C28;
   padding: 2rem 1.5rem;
   -webkit-transition: -webkit-box-shadow .3s ease, -webkit-transform .2s ease;
   transition: -webkit-box-shadow .3s ease, -webkit-transform .2s ease;
@@ -231,7 +230,7 @@ a:link.scrolled {
   display: block;
   height: 18px;
   width: 25px;
-  fill: #515F65;
+  fill: #FFFDEE;
   cursor: pointer;
   -webkit-transition: fill 0.2s ease, -webkit-transform 0.2s ease;
   transition: fill 0.2s ease, -webkit-transform 0.2s ease;
@@ -241,14 +240,14 @@ a:link.scrolled {
 
 /*Text*/
 .card-title {
-  color: #333;
+  color: #FFFDEE;
   font-size: 1.5em;
   font-weight: 600;
   line-height: 2rem;
 }
 
 .card-subtitle {
-  color: #859ba8;
+  color: #f5f2de;
   font-size: 0.8em;
 }
 
@@ -270,9 +269,8 @@ a:link.scrolled {
   transform: translateY(100%);
   opacity: 1;
 }
-
 .card-social__item svg:hover {
-  fill: #232323;
+  fill: #FFFDEE;
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -299,11 +297,11 @@ a:link.scrolled {
 }
 
 #INKonnect {
-  background-color: #FFFDEE;
+  background-color: #483C28 ;
 }
 
 #txtink {
-  color: #483C28;
+  color: #FFFDEE;
   font-family: 'Poppins';
 }
 
@@ -343,7 +341,7 @@ p {
   overflow: hidden;
   transition-duration: .3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
-  background-color: #66573c;
+  background-color: #483C28;
 }
 
 /* plus sign */

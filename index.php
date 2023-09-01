@@ -65,231 +65,223 @@
       </button>
     </div>
 
-    <div id="blog-preview" class="d-flex align-items-center justify-content-center">
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, provident laboriosam ad in voluptatum
-        consectetur dolorum obcaecati porro dignissimos quibusdam...</p>
-    </div>
 
 
 
 
 
 
-    <div class="group pt-5 pb-5">
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
-            <h1>Sobre Nós</h1>
-            <p class="h6" class="bright-text">
-              Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando
-              duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que
-              promete
-              revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda
-              Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada
-              a
-              desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma
-              sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando
-              as
-              melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa
-              plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes
-              apaixonados por tatuagens de maneira rápida, eficiente e confiável.
-            </p>
-          </div>
-          <div class="img col-md-5 col-sm-5 align-self-center">
-            <img src="views/img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid">
-          </div>
+
+    <div class="group p-5">
+
+      <div class="row justify-content-md-center">
+        <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
+          <h1>Sobre Nós</h1>
+          <p class="h6" class="bright-text">
+            Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando
+            duro em nosso projeto de TCC chamado INKonnect. Nosso objetivo é criar uma plataforma inovadora que
+            promete
+            revolucionar a forma como tatuadores e clientes se conectam. Composta pelos membros Diego Baltazar, Amanda
+            Oliveira, Igor Leite e Arthur Fudali, todos do terceiro ano do ensino médio, nossa equipe está determinada
+            a
+            desenvolver uma solução tecnológica que simplifique o processo de encontrar o tatuador ideal e agendar uma
+            sessão de tatuagem. Estamos mergulhados em pesquisas, estudando as necessidades dos usuários e explorando
+            as
+            melhores práticas de desenvolvimento para oferecer uma experiência excepcional. Acreditamos que nossa
+            plataforma será um catalisador para a comunidade de tatuagens, conectando artistas talentosos e clientes
+            apaixonados por tatuagens de maneira rápida, eficiente e confiável.
+          </p>
+        </div>
+        <div class="img col-md-5 col-sm-5 align-self-center">
+          <img src="views/img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid">
         </div>
       </div>
+
     </div>
 
     <!-- Noticias -->
-
+    <!-- teste -->
     <div id="blog">
+      <div class="row">
+        <div class="container">
+          <h1>Blog</h1>
+        </div>
 
-      <div class="row m-4">
-        <h1>Blog</h1>
-
-        <div class="col-6 q1">
+        <div class="col-6 q1 rounded row ">
           <?php
           $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 1;");
-          while ($exibe = mysqli_fetch_array($query)) {
-            $Data = new DateTime($exibe[7]);
-            $stringDate = $Data->format('d/m/Y, H:i:s');
-            ?>
-            <div class="square m-4">
+          while ($exibe = mysqli_fetch_array($query)) { ?>
+            <div class="">
 
-              <div class="row align-items-center justify-content-center m-2" id="noticiaprincipal"> <!-- dentro da noticia -->
+              <div class="row m-3" id=""> <!-- dentro da noticia -->
+                <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
+                  <a href="page.php?idb=<?php echo $exibe[0] ?>">
+                    <img src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="imgblog">
+                  </a>
+                </div>
+                <div class="card-corpo col-md-6 ">
+                  <div class="card-title">
+                    <a class="text-white text-decoration-none" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo $exibe[5] ?></a> <!-- titulo -->
+                  </div>
 
-                <div class="card-image col-md-6 mb-2 d-flex flex-column justify-content-center"> <!-- div imagem -->
-                  <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
-                      class="img-fluid" alt="ImgBlog"></a>
+                  <div class="card-sobre mb-2">
+                    <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo substr($exibe[6], 0, 50) . "..." ?></a> <!-- noticia -->
+                  </div>
                 </div>
-                <div class="card-corpo col-md-6 d-flex flex-column">
-                    <div class="card-title">
-                      <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo $exibe[5] ?></a> <!-- titulo -->
-                    </div>
-                    
-                    <div class="card-sobre mb-2">
-                      <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo substr($exibe[6], 0, 50) . "..." ?></a> <!-- noticia -->
-                    </div>
-                </div>
-                
+
               </div>
             </div>
           </div>
         <?php } ?>
 
-        <div class="col-6 abc">
+
+        <div class="col-6 rounded-3 ">
           <?php
           $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 1,2;");
-          while ($exibe = mysqli_fetch_array($query)) {
-            $Data = new DateTime($exibe[7]);
-            $stringDate = $Data->format('d/m/Y, H:i:s');
-            ?>
-            <div class="square col q2 ">
+          while ($exibe = mysqli_fetch_array($query)) {?>
+            <div class="square q2 rounded  ">
+              <div class="row m-3"> <!-- dentro da noticia -->
 
-              <div class="row align-items-center justify-content-center" id="noticia-direita">
-                <div class="row align-items-center justify-content-center m-2">
-
-                  <div class="card-image2 col-md-6 d-flex flex-column justify-content-center">
-                    <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"class="img-fluid" alt="ImgBlog"></a> <!-- imagem -->
-                  </div>
-
-                  <div class="card-corpo col-md-6 d-flex flex-column">
-                    <div class="card-title">
-                      <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo $exibe[5] ?></a> <!-- titulo -->
-                    </div>
-
-                    <div class="card-sobre mb-2">
-                      <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo substr($exibe[6], 0, 50) . "..." ?></a> <!-- noticia -->
-                    </div>
-                  </div>
-
+                <div class="card-image col-md-6 mt-3 mb-2"> <!-- div imagem -->
+                  <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
+                      class="img-fluid rounded" id="imgblog"></a>
                 </div>
-              </div>
 
+                <div class="card-corpo col-md-6 ">
+                  <div class="card-title">
+                    <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo $exibe[5] ?></a> <!-- titulo -->
+                  </div>
+
+                  <div class="card-sobre mb-2">
+                    <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo substr($exibe[6], 0, 50) . "..." ?></a> <!-- noticia -->
+                  </div>
+                </div>
+
+              </div>
             </div>
           <?php } ?>
         </div>
+
       </div>
     </div>
 
 
-    <div id="INKonnect">
-      <div class="pb-5 pt-3 container-fluid">
-        <div class="container col-13 col-sm-10 col-lg-10">
-
-          <div class="row m-0 p-0">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 p-3">
-              <img class="" src="views/img/ink.png" id="inkimg" width="280">
-            </div>
-            <div class="col-20 col-sm-12 col-md-12 col-lg-8">
-              <div class="container col-12 col-sm-12 col-lg-11 ">
-                <h1 class="display-5 lh-1 mb-3 mt-4" id="tituloink">INKonnect</h1>
-                <p id="txtink">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est vitae accusamus, laboriosam quidem ipsam
-                  tenetur? Velit nihil est asperiores, reprehenderit nostrum eos, id enim ex et omnis quaerat
-                  temporibus.
-                  Nam nulla obcaecati optio numquam earum, est excepturi nostrum, velit odio pariatur quidem corrupti.
-                  Maiores aliquid cupiditate cumque est, dignissimos aliquam, voluptatum fuga recusandae ut assumenda
-                  quis, laudantium tempora. Autem corrupti aut distinctio error ab, vitae, corporis veniam voluptatum
-                  vero
-                  possimus dignissimos architecto amet nam tempora quos consequuntur omnis laboriosam, dolore dolorem
-                  quidem? Libero omnis animi dicta veniam in, atque, assumenda ad consectetur eveniet harum eligendi
-                  odio
-                  tempore provident fugit cupiditate!
-                </p>
-              </div>
-            </div>
-          </div>
+    <div id="INKonnect" class="p-5">
+      <div class="row justify-content-md-center">
+        <div class="img col-md-5 col-sm-5 align-self-center">
+          <img src="views/img/logo.png" class="img-fluid logo">
         </div>
+        <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
+          <h1>INKonnect</h1>
+          <p class="h6" class="bright-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum dolorum adipisci fugit, animi
+            aspernatur ex sed veniam aliquam porro, cum ea dolor, voluptate distinctio reprehenderit omnis excepturi et
+            veritatis architecto perspiciatis fugiat id! Veritatis debitis dignissimos consectetur exercitationem
+            commodi vero quos minus mollitia voluptatibus doloribus quas, earum harum, aspernatur inventore officia
+            facere praesentium architecto similique soluta natus beatae, maxime eum qui voluptate. Blanditiis, numquam
+            non deleniti incidunt laudantium consequatur cumque perferendis ex qui sed alias nesciunt accusantium, culpa
+            quasi sit delectus modi placeat! Odit corrupti, ut magnam qui magni reprehenderit, at quos provident
+            officiis autem fuga quasi commodi, consectetur deserunt similique cupiditate laborum enim. Amet quos eius
+            temporibus illo alias deserunt nobis impedit officiis at voluptatibus doloremque saepe a magnam quod,
+            aperiam assumenda labore itaque reiciendis sequi sapiente. Perspiciatis voluptate laudantium nobis
+            consectetur quidem, quisquam eaque beatae! Labore quis voluptatibus laboriosam unde reprehenderit voluptas
+            mollitia suscipit aut deleniti sunt molestiae sint dolorem, sed omnis, aspernatur tenetur ducimus. Mollitia
+            obcaecati unde corrupti, tempore officiis ducimus cupiditate id molestiae, deserunt maxime et iusto suscipit
+            consequuntur doloremque vero. Perferendis eaque adipisci ipsam iure natus, minima excepturi ut placeat.
+            Sequi ducimus minus sapiente corporis ea suscipit fugiat, quam error distinctio iste. Inventore, ipsam.
+          </p>
+        </div>
+
       </div>
     </div>
     <div id="team" class="integrantes">
-      <div class="container pt-4">
-        <span class="h1" id="int">DAiA</span>
-      </div>
-      <div class="container col-6 col-xxl-12 px-4 py-4 text-center" id="caca">
-        <div class="row" id="card-int">
-          <div class="card me-5 ms-5 mt-3">
-            <div class="card-info">
-              <div class="card-avatar"><img src="views/img/dig.png" alt=""></div>
-              <div class="card-title">Diego</div>
-              <div class="card-subtitle">Back-end</div>
-            </div>
+      <div class="pt-5 ps-5 pb-5">
+        <h1 class="ps-5" id="int">DAiA</h1>
 
-            <ul class="card-social">
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://github.com/SouzaDiegoCl"><i class="bi bi-github icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.linkedin.com/in/diegosouzaperfil/"><i class="bi bi-linkedin icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.instagram.com/s0uza_diego/"><i class="bi bi-instagram icon"></i></a></li>
-            </ul>
-          </div>
-          <div class="card me-5 ms-5 mt-3">
-            <div class="card-info">
-              <div class="card-avatar"><img src="views/img/amanda.png" alt=""></div>
-              <div class="card-title">Amanda</div>
-              <div class="card-subtitle">Web Developer</div>
-            </div>
+        <div class="container col-6 col-xxl-12 px-4 py-4 text-center" id="caca">
+          <div class="row" id="card-int">
+            <div class="card me-5 ms-5 mt-3">
+              <div class="card-info">
+                <div class="card-avatar"><img src="views/img/dig.png" alt=""></div>
+                <div class="card-title">Diego</div>
+                <div class="card-subtitle">Back-end</div>
+              </div>
 
-            <ul class="card-social">
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://github.com/amandazzoc"><i class="bi bi-github icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.linkedin.com/in/amanda-oliveira-970410232/"><i class="bi bi-linkedin icon"></i></a>
-              </li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.instagram.com/amandazzoc/?utm_medium=copy_link"><i
-                    class="bi bi-instagram icon"></i></a></li>
-            </ul>
-          </div>
-          <div class="card me-5 ms-5 mt-3">
-            <div class="card-info">
-              <div class="card-avatar"><img src="views/img/igor.png" alt=""></div>
-              <div class="card-title">Igor</div>
-              <div class="card-subtitle">Designer</div>
+              <ul class="card-social">
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://github.com/SouzaDiegoCl"><i class="bi bi-github icon"></i></a></li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.linkedin.com/in/diegosouzaperfil/"><i class="bi bi-linkedin icon"></i></a></li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.instagram.com/s0uza_diego/"><i class="bi bi-instagram icon"></i></a></li>
+              </ul>
             </div>
+            <div class="card me-5 ms-5 mt-3">
+              <div class="card-info">
+                <div class="card-avatar"><img src="views/img/amanda.png" alt=""></div>
+                <div class="card-title">Amanda</div>
+                <div class="card-subtitle">Web Developer</div>
+              </div>
 
-            <ul class="card-social">
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://github.com/IgorLGomes"><i class="bi bi-github icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.linkedin.com/in/igor-gomes-ab581a214/"><i class="bi bi-linkedin icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.instagram.com/igomsleit/"><i class="bi bi-instagram icon"></i></a></li>
-            </ul>
-          </div>
-          <div class="card me-5 ms-5 mt-3">
-            <div class="card-info">
-              <div class="card-avatar"><img src="views/img/arthu.png" alt=""></div>
-              <div class="card-title">Arthur</div>
-              <div class="card-subtitle">Mobile Developer</div>
+              <ul class="card-social">
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://github.com/amandazzoc"><i class="bi bi-github icon"></i></a></li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.linkedin.com/in/amanda-oliveira-970410232/"><i
+                      class="bi bi-linkedin icon"></i></a>
+                </li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.instagram.com/amandazzoc/?utm_medium=copy_link"><i
+                      class="bi bi-instagram icon"></i></a></li>
+              </ul>
             </div>
+            <div class="card me-5 ms-5 mt-3">
+              <div class="card-info">
+                <div class="card-avatar"><img src="views/img/igor.png" alt=""></div>
+                <div class="card-title">Igor</div>
+                <div class="card-subtitle">Designer</div>
+              </div>
 
-            <ul class="card-social">
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://github.com/arthurfudali"><i class="bi bi-github icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.linkedin.com/in/arthurfudali/"><i class="bi bi-linkedin icon"></i></a></li>
-              <li class="card-social__item"><a class="text-muted" target="_blank"
-                  href="https://www.instagram.com/arthurfudali/"><i class="bi bi-instagram icon"></i></a></li>
-            </ul>
+              <ul class="card-social">
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://github.com/IgorLGomes"><i class="bi bi-github icon"></i></a></li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.linkedin.com/in/igor-gomes-ab581a214/"><i class="bi bi-linkedin icon"></i></a>
+                </li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.instagram.com/igomsleit/"><i class="bi bi-instagram icon"></i></a></li>
+              </ul>
+            </div>
+            <div class="card me-5 ms-5 mt-3">
+              <div class="card-info">
+                <div class="card-avatar"><img src="views/img/arthu.png" alt=""></div>
+                <div class="card-title">Arthur</div>
+                <div class="card-subtitle">Mobile Developer</div>
+              </div>
+
+              <ul class="card-social">
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://github.com/arthurfudali"><i class="bi bi-github icon"></i></a></li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.linkedin.com/in/arthurfudali/"><i class="bi bi-linkedin icon"></i></a></li>
+                <li class="card-social__item"><a class="text-muted" target="_blank"
+                    href="https://www.instagram.com/arthurfudali/"><i class="bi bi-instagram icon"></i></a></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="container" id="btn">
-        <button class="Btn mt-3 mb-3">
+        <div class="container" id="btn">
+          <button class="Btn mt-3 mb-3">
 
-          <div class="sign"><svg viewBox="0 0 512 512">
-              <path
-                d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
-              </path>
-            </svg></div>
+            <div class="sign"><svg viewBox="0 0 512 512">
+                <path
+                  d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z">
+                </path>
+              </svg></div>
 
-          <a class="text" href="views/login.php">Login</a>
-        </button>
+            <a class="text" href="views/login.php">Login</a>
+          </button>
+        </div>
       </div>
     </div>
 
