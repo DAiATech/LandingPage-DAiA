@@ -117,12 +117,19 @@ a:link.scrolled {
   align-items: center;
 }
 
-
 .blog {
   display: flex;
   height: 100vh;
 }
 
+#noticiaprincipal{
+  border-radius: 5px;
+  height: 100%;
+  display: flex;
+}
+
+
+/* carousel */
 .carousel-item {
   height: 92vh;
   min-height: 350px;
