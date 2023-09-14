@@ -389,3 +389,7 @@ p {
 .Btn:active {
   transform: translate(2px, 2px);
 }
+
+.notiça{
+  height:58vh;
+}
