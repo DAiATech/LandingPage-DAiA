@@ -142,7 +142,7 @@
 
 
           while ($exibe = mysqli_fetch_array($query)) {?>
-            <div class="square q2 rounded mb-2  "> <!-- principal -->
+            <div class="square q2 rounded mb-3  "> <!-- principal -->
               <div class="row m-3 mt-0"> <!-- dentro da noticia -->
 
                 <div class="card-image col-md-6 mt-1 mb-2"> <!-- div imagem -->
@@ -163,37 +163,38 @@
               </div>
             </div>
           <?php } ?>
+
+
+          <div class="rounded-3 ">  <!-- envolve -->
+          <?php
+          $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 2,1;");
+          while ($exibe = mysqli_fetch_array($query)) {?>
+            <div class="square q2 rounded mt-3  "><!-- principal -->
+              <div class="row m-3 mt-0"> <!-- dentro da noticia -->
+
+                <div class="card-image col-md-6 mt-1 mb-2"> <!-- div imagem -->
+                  <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
+                      class="img-fluid rounded" id="imgblog"></a>
+                </div>
+
+                <div class="card-corpo col-md-6 ">
+                  <div class="card-title">
+                    <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo $exibe[5] ?></a> <!-- titulo -->
+                  </div>
+
+                  <div class="card-sobre mb-2">
+                    <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo substr($exibe[6], 0, 50) . "..." ?></a> <!-- noticia -->
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          <?php } ?>
+        </div>
         </div>
 
         <!-- 3a div -->
-        <div class="col-6 rounded-3 ">  <!-- envolve -->
-          <?php
-          $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 2,1;");
 
-
-          while ($exibe = mysqli_fetch_array($query)) {?>
-            <div class="square q2 rounded mb-2  "><!-- principal -->
-              <div class="row m-3 mt-0"> <!-- dentro da noticia -->
-
-                <div class="card-image col-md-6 mt-1 mb-2"> <!-- div imagem -->
-                  <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
-                      class="img-fluid rounded" id="imgblog"></a>
-                </div>
-
-                <div class="card-corpo col-md-6 ">
-                  <div class="card-title">
-                    <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo $exibe[5] ?></a> <!-- titulo -->
-                  </div>
-
-                  <div class="card-sobre mb-2">
-                    <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>"><?php echo substr($exibe[6], 0, 50) . "..." ?></a> <!-- noticia -->
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          <?php } ?>
-        </div>
 
       </div>
     </div>
