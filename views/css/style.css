@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=  +Sans+SC:wght@100;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Alegreya+Sans+SC:wght@100;300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans+SC:wght@100;500&display=swap');
 
@@ -145,10 +144,15 @@ a:link.scrolled {
 }
 
 #int {
-  font-family: 'Abhaya Libre';
+  font-family: 'Poppins';
   color: #483C28;
 }
-
+#blogtt {
+  font-family: 'Poppins';
+  color: #483C28;
+  padding-left: 3%;
+  
+}
 .integrantes {
   background-color: #FFFDEE;
   align-items: center;

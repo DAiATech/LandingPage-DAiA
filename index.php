@@ -102,10 +102,10 @@
     <!-- Noticias -->
     <!-- teste -->
     <div id="blog">
-      <div class="row">
-        <div class="container">
-          <h1>Blog</h1>
-        </div>
+      <div class="row pt-5 ps-5 pb-5">
+        
+          <h1 id="blogtt">Blog</h1>
+       
 
         <div class="col-6 q1 rounded row ">
           <?php
