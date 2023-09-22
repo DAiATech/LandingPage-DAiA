@@ -41,15 +41,19 @@ if (empty($_SESSION)) {
         $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo;");
         while ($exibe = mysqli_fetch_array($query)) { ?>
             <tr>
-                <td><img class="rounded mx-auto d-block " src="views/imgs/<?php echo $exibe[10] ?>" width="200px" alt="">
+                <td>
+                    <a class="link-underline-opacity-0" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                        <img class="rounded mx-auto d-block " src="views/imgs/<?php echo $exibe[10] ?>" width="200px" alt="">
+                    </a>
                 </td>
+
                 <td>
                     <a class="link-underline-opacity-0" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                         <h3 class="title">
                             <?php echo $exibe[5] ?>
                         </h3>
                         Criada por <b>
-                            <?php echo $exibe[12] ?>
+                            <?php echo $exibe[13] ?>
                         </b> em
                         <?php echo $exibe[7] ?>
                         <hr>

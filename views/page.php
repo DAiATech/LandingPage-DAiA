@@ -28,13 +28,13 @@ include("../models/conexao.php")
             while ($exibe = mysqli_fetch_array($query)) {
                 ?>
                 <tr>
-                    <td><img src="imgs/<?php echo $exibe[10] ?>" width="200px" alt=""></td>
+                    <td><img src="../cms/views/imgs/<?php echo $exibe[10] ?>" width="200px" alt=""></td>
                     <td>
                         <h3>
                             <?php echo $exibe[5] ?>
                         </h3>
                         Criada por <b>
-                            <?php echo $exibe[13] ?>
+                            <?php echo $exibe[12] ?>
                         </b> em
                         <?php echo $exibe[7] ?>
                         <hr>
