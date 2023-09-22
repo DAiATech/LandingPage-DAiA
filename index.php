@@ -116,19 +116,19 @@
 
               <div class="row notiça" id=""> <!-- dentro da noticia -->
                 <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
-                  <a href="page.php?idb=<?php echo $exibe[0] ?>">
+                  <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                     <img src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="imgblog">
                   </a>
                 </div>
                 <div class="card-corpo col-md-6 ">
                   <div class="card-title">
-                    <a class="text-white text-decoration-none" href="page.php?idb=<?php echo $exibe[0] ?>">
+                    <a class="text-white text-decoration-none" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                       <?php echo $exibe[5] ?>
                     </a> <!-- titulo -->
                   </div>
 
-                  <div class="card-sobre">
-                    <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>">
+                  <div class="card-sobre mb-2">
+                    <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                       <?php echo substr($exibe[6], 0, 50) . "..." ?>
                     </a> <!-- noticia -->
                   </div>
@@ -149,20 +149,21 @@
             <div class="square q2 rounded mb-3  "> <!-- principal -->
               <div class="row m-3 mt-0"> <!-- dentro da noticia -->
 
-                <div class="card-image col-md-6 mt-1 mb-2"> <!-- div imagem -->
-                  <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
-                      class="img-fluid rounded" id="imgblog"></a>
+                <div class="card-image col-md-6 mt-3 mb-2"> <!-- div imagem -->
+                  <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img
+                      src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="imgblog"></a>
                 </div>
 
                 <div class="card-corpo col-md-6 ">
                   <div class="card-title">
-                    <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>">
+                    <a class="text-white text-decoration-none fw-bold"
+                      href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                       <?php echo $exibe[5] ?>
                     </a> <!-- titulo -->
                   </div>
 
                   <div class="card-sobre mb-2">
-                    <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>">
+                    <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                       <?php echo substr($exibe[6], 0, 50) . "..." ?>
                     </a> <!-- noticia -->
                   </div>

@@ -22,7 +22,7 @@
                         <?php echo $exibe[5] ?>
                     </h3>
                     Criada por <b>
-                        <?php echo $exibe[12] ?>
+                        <?php echo $exibe[13] ?>
                     </b> em
                     <?php echo $exibe[7] ?>
                     <hr>
