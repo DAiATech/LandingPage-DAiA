@@ -23,7 +23,8 @@ a{
     border: none;
     display: flex;
     padding: 0.75rem 0.75rem;
-    background-color: #a71c1cd2;
+    background-color: #9c412f
+    ;
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -45,7 +46,7 @@ a{
     border: none;
     display: flex;
     padding: 0.75rem 1rem;
-    background-color: #1ca746d2;
+    background-color: #19390F;
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -78,7 +79,7 @@ button {
     border: none;
     display: flex;
     padding: 0.75rem 1.5rem;
-    background-color: #483C28;
+    background-color: #19390F;
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1rem;

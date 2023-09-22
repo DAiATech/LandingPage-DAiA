@@ -93,7 +93,7 @@
           </p>
         </div>
         <div class="img col-md-5 col-sm-5 align-self-center">
-          <img src="views/img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid">
+          <img src="views/img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid rounded-1">
         </div>
       </div>
 
