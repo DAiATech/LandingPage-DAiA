@@ -318,7 +318,11 @@ a:link.scrolled {
   background-color: #483C28;
 
 }
-
+span{
+  margin-left: 4px;
+  color: white;
+  font-family: 'Poppins';
+}
 p {
   font-family: 'Poppins';
 }
@@ -354,7 +358,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-left: 20px;
 }
 
 .sign svg {
@@ -396,4 +399,26 @@ p {
 
 .notiça{
   height:58vh;
+}
+.btnca {
+  border: none;
+  display: flex;
+  padding: 0.75rem 0.75rem;
+  background-color: #a71c1cd2;
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  user-select: none;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px -1px #6d393991, 0 2px 4px -1px #703d3d7e;
+  transition: all .6s ease;
+}
+.btnca:hover {
+  box-shadow: 0 10px 15px -3px #6d393991, 0 4px 6px -2px #703d3d7e;
 }

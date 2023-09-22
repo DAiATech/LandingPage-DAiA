@@ -11,7 +11,11 @@
     background-color: #F4F2E2;
 }
 
-a {
+.click {
+    text-decoration: none;
+    color: #483C28 !important;
+}
+a{
     text-decoration: none;
 }
 
@@ -106,6 +110,12 @@ button svg {
 }
 
 
+.font{
+    color: #483C28;
+    font-family: 'Poppins';
+}
+ 
+ 
 .buttonsair {
 
     font-size: 0.75rem;
@@ -123,9 +133,4 @@ button svg {
     background: #6b5b40;
     transition: all .6s ease;
     box-shadow: 0 4px 6px -1px #50432f91, 0 2px 4px -1px #5e50397e;
-}
-
-.title {
-    font-family: 'Poppins';
-
 }

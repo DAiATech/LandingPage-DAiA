@@ -7,7 +7,7 @@ if (empty($_SESSION)) {
 ?>
 <link rel="stylesheet" href="views/css/style.css">
 <div class="container pt-2 mt-5 p-3 rounded-2 shadow" id="main">
-    <p class="h3" id="title">Blog</p>
+    <p class="h3 m-3 font" >Blog</p>
     <div class="row">
         <a class="m-3 col-2" id="btn" href="views/cadastro.php">
             <button class="full-rounded">
@@ -32,7 +32,6 @@ if (empty($_SESSION)) {
                         <line y2="12" y1="12" x2="19" x1="5"></line>
                     </svg></span>
                 <span>Cadastrar Usuário</span>
-                <div class=" full-rounded"></div>
             </button>
         </a>
         <a class="m-3 col-6 " id="btn" href="controllers/logoff.php">
@@ -63,7 +62,7 @@ if (empty($_SESSION)) {
                 <td><img class="rounded mx-auto d-block " src="views/imgs/<?php echo $exibe[10] ?>" width="200px" alt="">
                 </td>
                 <td>
-                    <p class="link-underline-opacity-0" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                    <a class="link-underline-opacity-0 click" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                     <h3 class="title">
                         <?php echo $exibe[5] ?>
                     </h3>
