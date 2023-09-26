@@ -31,7 +31,7 @@
       </div>
     </links>
     <div id="divlogo">
-      <img src="views/img/daialogo.png" class="logo">
+      <img src="views/img/daialogo.png" class="logo" id="navbar-logo">
     </div>
   </nav>
 </header>
