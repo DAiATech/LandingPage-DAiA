@@ -17,6 +17,7 @@
 }
 a{
     text-decoration: none;
+    color: #19390F;
 }
 
 .btn {
@@ -79,7 +80,7 @@ button {
     border: none;
     display: flex;
     padding: 0.75rem 1.5rem;
-    background-color: #19390F;
+    background-color: #6b5b40;
     color: #ffffff;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -131,7 +132,7 @@ button svg {
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-family: 'Poppins';
-    background: #6b5b40;
+    background: #19390F;
     transition: all .6s ease;
     box-shadow: 0 4px 6px -1px #50432f91, 0 2px 4px -1px #5e50397e;
 }
