@@ -21,10 +21,10 @@
   <nav class="fixed-top nav-header">
     <links id="links" class="links">
       <div class="line">
-        <a href="#" class="px-5 a1">Sobre Nós</a>
+        <a href="#sobrenos" class="px-5 a1">Sobre Nós</a>
       </div>
       <div>
-        <a href="#" class="px-5 a2">INKonnect</a>
+        <a href="#INKonnect" class="px-5 a2">INKonnect</a>
       </div>
       <div class="line2">
         <a href="#team" class="px-5 a3">Integrantes</a>
@@ -72,7 +72,7 @@
 
 
 
-    <div class="group p-5">
+    <div class="group p-5" id="sobrenos">
 
       <div class="row justify-content-md-center">
         <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
@@ -182,19 +182,19 @@
                 <div class="row m-3 mt-0"> <!-- dentro da noticia -->
 
                   <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
-                    <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
+                    <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
                         class="img-fluid rounded" id="imgblog"></a>
                   </div>
 
                   <div class="card-corpo col-md-6 ">
                     <div class="card-title">
-                      <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>">
+                      <a class="text-white text-decoration-none fw-bold" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                         <?php echo $exibe[5] ?>
                       </a> <!-- titulo -->
                     </div>
 
                     <div class="card-sobre mb-2">
-                      <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>">
+                      <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                         <?php echo substr($exibe[6], 0, 50) . "..." ?>
                       </a> <!-- noticia -->
                     </div>
@@ -249,7 +249,7 @@
           <div class="row" id="card-int">
             <div class="card me-5 ms-5 mt-3">
               <div class="card-info">
-                <div class="card-avatar"><img src="views/img/dig.png" alt=""></div>
+                <div class="card-avatar"><img src="views/img/diego.png" alt=""></div>
                 <div class="card-title">Diego</div>
                 <div class="card-subtitle">Back-end</div>
               </div>
@@ -301,7 +301,7 @@
             </div>
             <div class="card me-5 ms-5 mt-3">
               <div class="card-info">
-                <div class="card-avatar"><img src="views/img/arthu.png" alt=""></div>
+                <div class="card-avatar"><img src="views/img/arthur.png" alt=""></div>
                 <div class="card-title">Arthur</div>
                 <div class="card-subtitle">Mobile Developer</div>
               </div>
@@ -318,7 +318,7 @@
           </div>
         </div>
         <div class="container" id="btn">
-          <a  href="views/login.php">
+          <a  href="views/login.php" >
             <button class="Btn mt-3 mb-3">
 
              <div class="sign"><svg viewBox="0 0 512 512">
