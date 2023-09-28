@@ -73,9 +73,8 @@
 
 
     <div class="group p-5">
-
-      <div class="row justify-content-md-center">
-        <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
+      <div class="row justify-content-md-center p-1">
+        <div class="text col-lg-5 col-sm-4 col-md-5 bright-text">
           <h1>Sobre Nós</h1>
           <p class="h6" class="bright-text">
             Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando
@@ -92,7 +91,7 @@
             apaixonados por tatuagens de maneira rápida, eficiente e confiável.
           </p>
         </div>
-        <div class="img col-md-5 col-sm-5 align-self-center">
+        <div class="img col-md-4 col-sm-5 align-self-center">
           <img src="views/img/kkk.jpeg" alt="q foto ruim kkkkk" class="img-fluid rounded-1">
         </div>
       </div>
@@ -102,7 +101,7 @@
     <!-- Noticias -->
     <!-- teste -->
     <div id="blog">
-      <div class="row pt-5 ps-5 pb-5">
+      <div class="row p-5 ms-5">
 
         <h1 id="blogtt">Blog</h1>
 
@@ -182,19 +181,19 @@
                 <div class="row m-3 mt-0"> <!-- dentro da noticia -->
 
                   <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
-                    <a href="page.php?idb=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
+                    <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
                         class="img-fluid rounded" id="imgblog"></a>
                   </div>
 
                   <div class="card-corpo col-md-6 ">
                     <div class="card-title">
-                      <a class="text-white text-decoration-none fw-bold" href="page.php?idb=<?php echo $exibe[0] ?>">
+                      <a class="text-white text-decoration-none fw-bold" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                         <?php echo $exibe[5] ?>
                       </a> <!-- titulo -->
                     </div>
 
                     <div class="card-sobre mb-2">
-                      <a class="text-white" href="page.php?idb=<?php echo $exibe[0] ?>">
+                      <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                         <?php echo substr($exibe[6], 0, 50) . "..." ?>
                       </a> <!-- noticia -->
                     </div>
