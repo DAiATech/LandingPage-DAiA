@@ -38,7 +38,6 @@
 
 
 
-
 <body>
   <main>
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -75,7 +74,7 @@
     <div class="group p-5" id="sobrenos">
 
       <div class="row justify-content-md-center">
-        <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
+        <div class="text col-lg-4 col-sm-4 col-md-5 bright-text">
           <h1>Sobre Nós</h1>
           <p class="h6" class="bright-text">
             Nós somos a DAiATech, um grupo de estudantes do curso de Desenvolvimento de Sistemas que está trabalhando
@@ -101,63 +100,80 @@
 
     <!-- Noticias -->
     <!-- teste -->
-    <div id="blog">
-      <div class="row p-5 ms-5">
-
-        <h1 id="blogtt">Blog</h1>
-
-
-        <div class="col-6 q1 rounded row ">
-          <?php
-          $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 1;");
-
-          while ($exibe = mysqli_fetch_array($query)) { ?>
-            <div class="">
-
-              <div class="row notiça" id=""> <!-- dentro da noticia -->
-                <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
-                  <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
-                    <img src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="imgblog">
-                  </a>
+    <div id="blog" class="row">
+      <div class="col-1"></div>
+      <div class="row col-10 ms-2">
+      <h1 id="blogtt">Blog</h1>
+      
+      <div class="col-6 q1 rounded row parent">
+        <?php
+        $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 1;");
+        while ($exibe = mysqli_fetch_array($query)) { ?>
+            <div class="row notiça center" id=""> <!-- dentro da noticia -->
+              <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
+                <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                  <img src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="img1blog">
+                </a>
+              </div>
+              <div class="card-corpo col-md-6 ">
+                <div class="card-title">
+                  <h1><a class="text-white text-decoration-none" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                    <?php echo $exibe[5] ?>
+                  </a></h1> <!-- titulo -->
                 </div>
-                <div class="card-corpo col-md-6 ">
-                  <div class="card-title">
-                    <a class="text-white text-decoration-none" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
-                      <?php echo $exibe[5] ?>
-                    </a> <!-- titulo -->
-                  </div>
+              </div>
+              <div class="card-sobre mb-2">
+                  <a class="text-white descriçao" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                    <p>
+                      <?php echo substr($exibe[6], 0, 150) . "..." ?>
+                    </p>
+                  </a> <!-- noticia -->
+                </div>
+            </div>
+        <?php } ?>
+        </div>
 
-                  <div class="card-sobre mb-2">
-                    <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
-                      <?php echo substr($exibe[6], 0, 50) . "..." ?>
-                    </a> <!-- noticia -->
-                  </div>
+        <div class="col-6 rounded-3" id="noticias2"> <!-- envolve -->
+        <?php
+        $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 1,1;");
+        while ($exibe = mysqli_fetch_array($query)) { ?>
+          <div class="square q2 rounded mb-3 coisa"> <!-- principal -->
+            <div class="row"> <!-- dentro da noticia -->
+              <div class="card-image col"> <!-- div imagem -->
+                <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img
+                    src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="imgblog"></a>
+              </div>
+              <div class="card-corpo col">
+                <div class="card-title">
+                  <a class="text-white text-decoration-none fw-bold"
+                    href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                    <?php echo $exibe[5] ?>
+                  </a> <!-- titulo -->
                 </div>
 
+                <div class="card-sobre mb-2">
+                  <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                    <?php echo substr($exibe[6], 0, 50) . "..." ?>
+                  </a> <!-- noticia -->
+                </div>
               </div>
             </div>
           </div>
         <?php } ?>
 
-
-        <div class="col-6 rounded-3 "> <!-- envolve -->
+        <div class="rounded-3 "> <!-- envolve -->
           <?php
-          $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 1,1;");
-
-
+          $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 2,1;");
           while ($exibe = mysqli_fetch_array($query)) { ?>
-            <div class="square q2 rounded mb-3  "> <!-- principal -->
-              <div class="row m-3 mt-0"> <!-- dentro da noticia -->
-
-                <div class="card-image col-md-6 mt-3 mb-2"> <!-- div imagem -->
-                  <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img
-                      src="cms/views/imgs/<?php echo $exibe[10] ?>" class="img-fluid rounded" id="imgblog"></a>
+            <div class="square q2 rounded mt-3 coisa"><!-- principal -->
+              <div class="row"> <!-- dentro da noticia -->
+                <div class="card-image col"> <!-- div imagem -->
+                  <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
+                      class="img-fluid rounded" id="imgblog"></a>
                 </div>
-
-                <div class="card-corpo col-md-6 ">
+                <div class="card-corpo col">
                   <div class="card-title">
-                    <a class="text-white text-decoration-none fw-bold"
-                      href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
+                    <a class="text-white text-decoration-none fw-bold" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
                       <?php echo $exibe[5] ?>
                     </a> <!-- titulo -->
                   </div>
@@ -168,74 +184,25 @@
                     </a> <!-- noticia -->
                   </div>
                 </div>
-
               </div>
             </div>
           <?php } ?>
-
-
-          <div class="rounded-3 "> <!-- envolve -->
-            <?php
-            $query = mysqli_query($conexao, "SELECT * from posts INNER JOIN bloginfo ON blog_bloginfo_codigo = bloginfo_codigo INNER JOIN imagens on blog_blogimgs_codigo = id_imagem INNER JOIN usuario ON blog_usuario_codigo = usuario_codigo group by blog_bloginfo_codigo desc limit 2,1;");
-            while ($exibe = mysqli_fetch_array($query)) { ?>
-              <div class="square q2 rounded mt-3  "><!-- principal -->
-                <div class="row m-3 mt-0"> <!-- dentro da noticia -->
-
-                  <div class="card-image col-md-6 mb-2"> <!-- div imagem -->
-                    <a href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>"><img src="cms/views/imgs/<?php echo $exibe[10] ?>"
-                        class="img-fluid rounded" id="imgblog"></a>
-                  </div>
-
-                  <div class="card-corpo col-md-6 ">
-                    <div class="card-title">
-                      <a class="text-white text-decoration-none fw-bold" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
-                        <?php echo $exibe[5] ?>
-                      </a> <!-- titulo -->
-                    </div>
-
-                    <div class="card-sobre mb-2">
-                      <a class="text-white" href="views/page.php?blog_codigo=<?php echo $exibe[0] ?>">
-                        <?php echo substr($exibe[6], 0, 50) . "..." ?>
-                      </a> <!-- noticia -->
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            <?php } ?>
-          </div>
         </div>
-
-        <!-- 3a div -->
-
-
+      </div>
+      <div class="col-1"></div>
       </div>
     </div>
 
 
     <div id="INKonnect" class="p-5">
       <div class="row justify-content-md-center">
-        <div class="img col-md-5 col-sm-5 align-self-center">
+        <div class="img col-md-4 col-sm-5 align-self-center">
           <img src="views/img/logo.png" class="img-fluid logo">
         </div>
-        <div class="text col-lg-6 col-sm-4 col-md-5 bright-text">
+        <div class="img col-md-4 col-sm-5 align-self-center bright-text">
           <h1>INKonnect</h1>
-          <p class="h6" class="bright-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora illum dolorum adipisci fugit, animi
-            aspernatur ex sed veniam aliquam porro, cum ea dolor, voluptate distinctio reprehenderit omnis excepturi et
-            veritatis architecto perspiciatis fugiat id! Veritatis debitis dignissimos consectetur exercitationem
-            commodi vero quos minus mollitia voluptatibus doloribus quas, earum harum, aspernatur inventore officia
-            facere praesentium architecto similique soluta natus beatae, maxime eum qui voluptate. Blanditiis, numquam
-            non deleniti incidunt laudantium consequatur cumque perferendis ex qui sed alias nesciunt accusantium, culpa
-            quasi sit delectus modi placeat! Odit corrupti, ut magnam qui magni reprehenderit, at quos provident
-            officiis autem fuga quasi commodi, consectetur deserunt similique cupiditate laborum enim. Amet quos eius
-            temporibus illo alias deserunt nobis impedit officiis at voluptatibus doloremque saepe a magnam quod,
-            aperiam assumenda labore itaque reiciendis sequi sapiente. Perspiciatis voluptate laudantium nobis
-            consectetur quidem, quisquam eaque beatae! Labore quis voluptatibus laboriosam unde reprehenderit voluptas
-            mollitia suscipit aut deleniti sunt molestiae sint dolorem, sed omnis, aspernatur tenetur ducimus. Mollitia
-            obcaecati unde corrupti, tempore officiis ducimus cupiditate id molestiae, deserunt maxime et iusto suscipit
-            consequuntur doloremque vero. Perferendis eaque adipisci ipsam iure natus, minima excepturi ut placeat.
-            Sequi ducimus minus sapiente corporis ea suscipit fugiat, quam error distinctio iste. Inventore, ipsam.
+          <p class="h6 bright-text">
+          O INKonnect é um projeto que visa facilitar a conexão entre clientes e tatuadores, tornando o processo de agendamento de tatuagens mais simples e eficiente. Com um chat intuitivo e uma agenda integrada, o aplicativo proporciona uma experiência agradavel para marcar as sessões. Além disso, o INKonnect oferece recursos como o espaço Discover, onde os clientes podem encontrar o artista ideal, e um feed que permite o acompanhamento das atualizações dos tatuadores. 
           </p>
         </div>
 
@@ -251,7 +218,7 @@
               <div class="card-info">
                 <div class="card-avatar"><img src="views/img/diego.png" alt=""></div>
                 <div class="card-title">Diego</div>
-                <div class="card-subtitle">Back-end</div>
+                <div class="card-subtitle">Mobile Developer</div>
               </div>
 
               <ul class="card-social">
@@ -303,7 +270,7 @@
               <div class="card-info">
                 <div class="card-avatar"><img src="views/img/arthur.png" alt=""></div>
                 <div class="card-title">Arthur</div>
-                <div class="card-subtitle">Mobile Developer</div>
+                <div class="card-subtitle">Back-End</div>
               </div>
 
               <ul class="card-social">
@@ -317,7 +284,13 @@
             </div>
           </div>
         </div>
-        <div class="container" id="btn">
+        
+      </div>
+      <footer id="footer">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Form -->
+    <div class="container" id="btn">
           <a  href="views/login.php" >
             <button class="Btn mt-3 mb-3">
 
@@ -331,7 +304,17 @@
             </button>
           </a>
         </div>
-      </div>
+    <!-- Section: Form -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    DAiA
+    <a class="text-white" href="https://github.com/DAiATech">DAiA</a>
+  </div>
+  <!-- Copyright -->
+</footer>
     </div>
 
   </main>
@@ -344,4 +327,4 @@
 <!-- link bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></scSSript >
-</html >
+</html>

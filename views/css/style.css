@@ -166,9 +166,7 @@
   display: flex;
 }
 #imgblog{
-  size: 200px;
-  height: 200px;
-  width: 250px;
+  height: 270px;
 }
 
 
@@ -443,7 +441,10 @@ p {
 }
 
 .notiça{
-  height:58vh;
+  display: flex;
+  height: 58vh;
+  align-content: center;
+  align-items: center;
 }
 .btnca {
   border: none;
@@ -466,4 +467,32 @@ p {
 }
 .btnca:hover {
   box-shadow: 0 10px 15px -3px #6d393991, 0 4px 6px -2px #703d3d7e;
+}
+.descriçao{
+  font-size: 1.4rem;
+}
+
+.parent{
+  display: flex;
+  justify-content: center;
+}
+#noticias2{
+
+  padding-top: 1px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.conteudo{
+  display: flex;
+}
+.card-image{
+  justify-content: center;
+}
+.coisa{
+  display: flex;
+  justify-content: center;
+}
+#footer{
+  background-color: #483C28;
 }
